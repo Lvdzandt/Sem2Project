@@ -1,0 +1,12 @@
+C:\Users\lvdza\source\repos\rpg\rpg\bin\Debug\rpg.exe.config
+C:\Users\lvdza\source\repos\rpg\rpg\bin\Debug\rpg.exe
+C:\Users\lvdza\source\repos\rpg\rpg\bin\Debug\rpg.pdb
+C:\Users\lvdza\source\repos\rpg\rpg\obj\Debug\rpg.csprojResolveAssemblyReference.cache
+C:\Users\lvdza\source\repos\rpg\rpg\obj\Debug\rpg.CharacterCreation.resources
+C:\Users\lvdza\source\repos\rpg\rpg\obj\Debug\rpg.Form1.resources
+C:\Users\lvdza\source\repos\rpg\rpg\obj\Debug\rpg.Properties.Resources.resources
+C:\Users\lvdza\source\repos\rpg\rpg\obj\Debug\rpg.csproj.GenerateResource.Cache
+C:\Users\lvdza\source\repos\rpg\rpg\obj\Debug\rpg.csproj.CoreCompileInputs.cache
+C:\Users\lvdza\source\repos\rpg\rpg\obj\Debug\rpg.exe
+C:\Users\lvdza\source\repos\rpg\rpg\obj\Debug\rpg.pdb
+C:\Users\lvdza\source\repos\rpg\rpg\obj\Debug\rpg.Field.resources
