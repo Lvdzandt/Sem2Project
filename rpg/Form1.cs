@@ -20,8 +20,8 @@ namespace rpg
         private void StartGame_Click(object sender, EventArgs e)
         {
             CharacterCreation character = new CharacterCreation();
-            this.Hide();
             character.Show();
+            this.Hide(); 
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace rpg
 {
@@ -17,15 +18,17 @@ namespace rpg
         public int currHP { get; private set; }
 
 
-        public Character(string _name, string _race,string _gender, int _maxHP, Weapon _weapon)
+        public Character(string _name, string _race,string _gender, Weapon _weapon)
         {
             name = _name;
             race = _race;
             gender = _gender;
-            maxHP = _maxHP;
-            currHP = _maxHP;
+            maxHP = 15;
+            currHP = maxHP;
             weapon = _weapon;
         }
+
+        
 
         public void AttackEnemey(Enemy enemy)
         {

@@ -33,11 +33,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.CharRace = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.CharHP = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.GenderM = new System.Windows.Forms.RadioButton();
             this.GenderV = new System.Windows.Forms.RadioButton();
+            this.DiffSelect = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // CharConfirm
@@ -73,7 +73,6 @@
             this.CharRace.Name = "CharRace";
             this.CharRace.Size = new System.Drawing.Size(100, 21);
             this.CharRace.TabIndex = 3;
-            this.CharRace.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -83,23 +82,6 @@
             this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Race:";
-            // 
-            // CharHP
-            // 
-            this.CharHP.Enabled = false;
-            this.CharHP.Location = new System.Drawing.Point(134, 110);
-            this.CharHP.Name = "CharHP";
-            this.CharHP.Size = new System.Drawing.Size(42, 20);
-            this.CharHP.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 113);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Hit Points:";
             // 
             // label6
             // 
@@ -132,16 +114,37 @@
             this.GenderV.Text = "V";
             this.GenderV.UseVisualStyleBackColor = true;
             // 
+            // DiffSelect
+            // 
+            this.DiffSelect.FormattingEnabled = true;
+            this.DiffSelect.Items.AddRange(new object[] {
+            "Easy",
+            "Normal",
+            "Hard"});
+            this.DiffSelect.Location = new System.Drawing.Point(76, 109);
+            this.DiffSelect.Name = "DiffSelect";
+            this.DiffSelect.Size = new System.Drawing.Size(100, 21);
+            this.DiffSelect.TabIndex = 14;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 112);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 13);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Diffeculty:";
+            // 
             // CharacterCreation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(197, 222);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.DiffSelect);
             this.Controls.Add(this.GenderV);
             this.Controls.Add(this.GenderM);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.CharHP);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.CharRace);
             this.Controls.Add(this.label1);
@@ -162,10 +165,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox CharRace;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox CharHP;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RadioButton GenderM;
         private System.Windows.Forms.RadioButton GenderV;
+        private System.Windows.Forms.ComboBox DiffSelect;
+        private System.Windows.Forms.Label label3;
     }
 }

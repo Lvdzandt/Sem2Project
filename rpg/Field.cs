@@ -1,48 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace rpg
 {
-    partial class Field : Form
+    class Field
     {
-        Character Player;
-        Enemy enemy;
-        public Field(Character character)
+        public double Difficulty { get; private set; }
+
+        public Field(string _diff)
         {
-            InitializeComponent();
-            Player = character;
+            Difficulty = DiffSet(_diff);
         }
 
-        private void Field_Load(object sender, EventArgs e)
+        private double DiffSet(string diff)
         {
-            PlayerName.Text = Player.name;
-            PlayerHP.Text = Convert.ToString(Player.currHP);
-            PlayerRace.Text = Player.race;
-            PlayerWeapon.Text = Player.weapon.name;
+            double multiplier = 0;
+            if (diff == "Easy")
+            {
+                multiplier = 0.8;
+            }
+            else if (diff == "Normal")
+            {
+                multiplier = 1;
+            }
+            else if(diff == "Hard")
+            {
+                multiplier = 1.2;
+            }
+            return multiplier;
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            enemy = new Enemy();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Player.AttackEnemey(enemy);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(enemy.ToString());
-        }
-
-        
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace rpg
 {
-    partial class Field
+    partial class GameScreen
     {
         /// <summary>
         /// Required designer variable.
