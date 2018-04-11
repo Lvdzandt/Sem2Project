@@ -236,7 +236,7 @@
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GameScreen";
-            this.Text = "Field";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Field_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
