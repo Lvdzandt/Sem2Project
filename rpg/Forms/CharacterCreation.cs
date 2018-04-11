@@ -12,10 +12,9 @@ namespace rpg
 {
     public partial class CharacterCreation : Form
     {
-        Character character;
-        Weapon weapon;
-        CharCreateController Controller = new CharCreateController();
-        Field Field;
+        Klasse.Character character;
+        Klasse.CharCreateController Controller = new Klasse.CharCreateController();
+        Klasse.Field Field;
       
         
 
@@ -28,6 +27,7 @@ namespace rpg
         private void CharacterCreation_Load(object sender, EventArgs e)
         {
             Controller.AddRace(CharRace);
+            Controller.AddWeapon(WeaponSelect);
         }
 
         private void CharConfirm_Click(object sender, EventArgs e)
@@ -43,9 +43,9 @@ namespace rpg
             }
             if (!string.IsNullOrEmpty(CharName.Text) && !string.IsNullOrEmpty(CharRace.Text) && gender != "")
             {
-                weapon = new Weapon(Controller.MakeWeapon());
-                character = new Character(CharName.Text, CharRace.Text,gender, weapon);
-                Field = new Field(DiffSelect.Text);
+                Klasse.Weapon weapon = new Klasse.Weapon(WeaponSelect.Text);
+                character = new Klasse.Character(CharName.Text, CharRace.Text,gender,weapon);
+                Field = new Klasse.Field(DiffSelect.Text);
                 this.Close();
                 GameScreen gamefield = new GameScreen(character,Field);
                 gamefield.Show();
@@ -57,6 +57,9 @@ namespace rpg
             
         }
 
-
+        private void CharRace_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Controller.AddTrait(TraitBox,CharRace.Text);
+        }
     }
 }

@@ -12,10 +12,10 @@ namespace rpg
 {
     partial class GameScreen : Form
     {
-        Character Player;
-        Enemy enemy;
-        Field Field;
-        public GameScreen(Character character, Field field)
+        Klasse.Character Player;
+        Klasse.Enemy enemy;
+        Klasse.Field Field;
+        public GameScreen(Klasse.Character character, Klasse.Field field)
         {
             InitializeComponent();
             Player = character;
@@ -27,23 +27,10 @@ namespace rpg
             PlayerName.Text = Player.name;
             PlayerHP.Text = Convert.ToString(Player.currHP);
             PlayerRace.Text = Player.race;
-            PlayerWeapon.Text = Player.weapon.name; 
+            PlayerWeapon.Text = Player.weapon.name;
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            enemy = new Enemy();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Player.AttackEnemey(enemy);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(enemy.ToString());
-        }
+       
 
         
     }

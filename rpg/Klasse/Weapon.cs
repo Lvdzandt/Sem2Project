@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace rpg
+namespace Klasse
 {
     class Weapon
     {
         public string name { get; private set; }
-        public int damage { get; private set; }
+        public double damage { get; private set; }
 
         public Weapon(string _name)
         {
@@ -35,7 +35,7 @@ namespace rpg
             return dmg;
         }
 
-        public int WeaponDMG
+        public double WeaponDMG
         {
             get { return damage; }
             private set { damage = value; }

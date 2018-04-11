@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace rpg
+namespace Klasse
 {
     class Enemy
     {
         private string name;
-        private int hp;
+        private double hp;
         private string status = "Alive";
 
         public Enemy()
@@ -19,7 +19,7 @@ namespace rpg
             hp = 10;
         }
 
-        public void TakeDmg(int dmgtaken)
+        public void TakeDmg(double dmgtaken)
         {
             hp = hp - dmgtaken;
             EnemyStatus();
